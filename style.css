@@ -83,23 +83,132 @@ select {
     --dk-blue-bgd: hsl(233, 47%, 7%);
     --dk-blue-card: hsl(244, 38%, 16%);
     --soft-viol: hsl(277, 64%, 61%);
-    --viol-overlay: hsl(277, 64%, 61% 0.5);
+    --viol-overlay: hsla(277, 100%, 61%, 0.50);
     --white: hsl(0, 0%, 100%);
     --transp-white-para: hsla(0, 0%, 100%, 0.75);
     --transp-white-stat-head: hsla(0, 0%, 100%, 0.6);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+body {
+    background-color: var(--dk-blue-bgd);
+    font-family: var(--ff-main);
+    font-weight: var(--fw-reg);
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    text-align: center;
+    display: grid;
+    place-content: center;
+    margin: 1.5rem;   
+}
+
+.stats-card {
+    display: grid;
+    background-color: var(--dk-blue-card);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: 63.75rem;
+}
+
+.card-content {
+    padding: 2rem 1.72rem;
+    display: grid;
+    gap: 1.5rem;
+}
+
+.img-container {
+    background-color: var(--soft-viol);
+    opacity: 1;
+}
+
+.img {
+  height: 100%;
+  opacity: 0.5;
+}
+
+.headline {
+    color: var(--white);
+    font-size: 1.75rem;
+    font-weight: var(--fw-bold);
+    line-height: 1.2;
+}
+
+.insights {
+    color: var(--soft-viol);
+}
+
+.para {
+    color: var(--transp-white-para);
+}
+
+.feature-list {
+    margin: 0;
+    padding: 0; 
+    display: flex; 
+    flex-direction: column;
+    gap: 2rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
 }
 
 
+.list-value {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
 
+.list-label {
+    color: var(--transp-white-stat-head);
+    text-transform: uppercase; 
+    letter-spacing: 0.125em;
+    font-size: 0.875rem;
+}
+
+footer {
+  position: sticky;
+  top: 100%;
+  margin-bottom: 0.5rem;
+  color: var(--transp-white-para);
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media (min-width: 48rem) {
+    .stats-card {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "right left";
+    }
 
+    .img-container {
+      grid-area: left;
+    }
+
+    .card-content {
+      grid-area: right;
+      text-align: left;
+      padding: 3.75rem 5rem 3.75rem 4rem;
+      gap: 0.75rem;
+    }
+
+    .para {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .headline {
+      font-size: 2rem;
+    }
+
+    .feature-list {
+      flex-direction: row;
+    }
+
+    .list-label {
+      font-size: 0.75rem;
+    }
 }
+    

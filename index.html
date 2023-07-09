@@ -15,42 +15,40 @@
 
   <main>
 
-    <article class="wrapper"></article>
-
+    <article class="stats-card">
       
       <div class="img-container">
         <picture>
-          <!-- Mobile version -->
-          <source srcset="images/image-header-mobile.jpg">
           <!-- Desktop version -->
-          <source media ="(min-width: 48rem)"
-                  srcset="images/image-header-desktop.jpg">
-          <!-- Fallback for unsupported browsers -->
-          <img class="img-mobile" src="images/image-header-mobile.jpg" alt="" />
+          <source srcset="images/image-header-desktop.jpg" media ="(min-width: 48rem)" class="img" alt="3 women working at a shared desk on laptops"/>
+          <!-- Mobile version -->
+          <img class="img" src="images/image-header-mobile.jpg" alt="3 women working at a shared desk on laptops" />
         </picture>
       </div>
-    
-      <h1 class="headline">Get <span class="insights">insights</span> that help your business grow.</h1>
+      
+      <div class="card-content">
+        <h1 class="headline">Get <span class="insights">insights</span> that help your business grow.</h1>
 
-      <p class="para">
-        Discover the benefits of data analytics and make better decisions regarding revenue, customer
-        experience, and overall efficiency.
-      </p>
+        <p class="para">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer
+          experience, and overall efficiency.
+        </p>
 
-      <ul class="feature-list" role="list">
-        <li>
-          <span class="list-value">10k+</span> 
-          <span class="list-label">companies</span>
-        </li>
-        <li>
-          <span class="list-value">10k+</span> 
-          <span class="list-label">templates</span>
-        </li>
-        <li>
-          <span class="list-value">12m+</span>
-          <span class="list-label">queries</span>
-        </li>
-      </ul>
+        <ul class="feature-list" role="list">
+          <li>
+            <span class="list-value">10k+</span> 
+            <span class="list-label">companies</span>
+          </li>
+          <li>
+            <span class="list-value">314</span> 
+            <span class="list-label">templates</span>
+          </li>
+          <li>
+            <span class="list-value">12M+</span>
+            <span class="list-label">queries</span>
+          </li>
+        </ul>
+      </div>
 
     </article>
 
