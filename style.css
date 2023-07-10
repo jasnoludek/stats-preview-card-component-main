@@ -97,8 +97,11 @@ body {
     line-height: 1.7;
     text-align: center;
     display: grid;
-    place-content: center;
-    margin: 1.5rem;   
+    place-content: center;  
+}
+
+main {
+  margin: 1.5rem;
 }
 
 .stats-card {
@@ -106,7 +109,7 @@ body {
     background-color: var(--dk-blue-card);
     border-radius: 0.5rem;
     overflow: hidden;
-    max-width: 63.75rem;
+    max-width: 30rem;
 }
 
 .card-content {
@@ -120,9 +123,16 @@ body {
     opacity: 1;
 }
 
-.img {
+.img, picture {
   height: 100%;
-  opacity: 0.5;
+  width: 100%;
+  object-fit: cover;
+}
+
+.img {
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+
 }
 
 .headline {
@@ -179,6 +189,7 @@ footer {
 
 @media (min-width: 48rem) {
     .stats-card {
+      max-width: 63.75rem;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "right left";
     }
